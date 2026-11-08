@@ -1,0 +1,71 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": null,
+  "device": "mps",
+  "dtype": "torch.float16",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "torch_version": "2.15.0",
+  "transformers_version": "5.22.2",
+  "prompt": "Explain supervised fine-tuning in simple English. Describe its purpose, training data, and how weights are updated.",
+  "input_tokens": 35,
+  "generation": {
+    "max_new_tokens": 128,
+    "seed": 42,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "thinking": false,
+    "use_cache": true
+  },
+  "load_seconds": 3.5775829589983914,
+  "memory_after_load": {
+    "tensor_memory_mib": 3296.23681640625,
+    "driver_memory_mib": 4296.6875
+  },
+  "warmup": {
+    "seconds": 4.284968124993611,
+    "output_tokens": 128,
+    "output_tokens_per_second": 29.871867483306154,
+    "memory_after_generation": {
+      "tensor_memory_mib": 3296.2392578125,
+      "driver_memory_mib": 4362.734375
+    },
+    "answer": "Sure! Let's break down **supervised fine-tuning** in simple English.\n\n---\n\n### 🔍 **What is Supervised Fine-Tuning?**\n\n**Supervised fine-tuning** is a machine learning technique used to improve the performance of a pre-trained model on a specific task. Instead of training the model from scratch, you take a model that was trained on a large dataset for a different task and then fine-tune it on a smaller, more specific dataset related to the task you want to use it for.\n\n---\n\n### 🧠 **Purpose**\n\nThe main purpose of **supervised fine-tuning** is to:\n\n-"
+  },
+  "runs": [
+    {
+      "seconds": 4.056113708007615,
+      "output_tokens": 128,
+      "output_tokens_per_second": 31.557300710604164,
+      "memory_after_generation": {
+        "tensor_memory_mib": 3296.2392578125,
+        "driver_memory_mib": 4362.734375
+      },
+      "answer": "Sure! Let's break down **supervised fine-tuning** in simple English.\n\n---\n\n### 🔍 **What is Supervised Fine-Tuning?**\n\n**Supervised fine-tuning** is a machine learning technique used to improve the performance of a pre-trained model on a specific task. Instead of training the model from scratch, you take a model that was trained on a large dataset for a different task and then fine-tune it on a smaller, more specific dataset related to the task you want to use it for.\n\n---\n\n### 🧠 **Purpose**\n\nThe main purpose of **supervised fine-tuning** is to:\n\n-"
+    },
+    {
+      "seconds": 4.089855875005014,
+      "output_tokens": 128,
+      "output_tokens_per_second": 31.29694637463064,
+      "memory_after_generation": {
+        "tensor_memory_mib": 3296.2392578125,
+        "driver_memory_mib": 4362.734375
+      },
+      "answer": "Sure! Let's break down **supervised fine-tuning** in simple English.\n\n---\n\n### 🔍 **What is Supervised Fine-Tuning?**\n\n**Supervised fine-tuning** is a machine learning technique used to improve the performance of a pre-trained model on a specific task. Instead of training the model from scratch, you take a model that was trained on a large dataset for a different task and then fine-tune it on a smaller, more specific dataset related to the task you want to use it for.\n\n---\n\n### 🧠 **Purpose**\n\nThe main purpose of **supervised fine-tuning** is to:\n\n-"
+    },
+    {
+      "seconds": 4.022885542013682,
+      "output_tokens": 128,
+      "output_tokens_per_second": 31.817957200922187,
+      "memory_after_generation": {
+        "tensor_memory_mib": 3296.2392578125,
+        "driver_memory_mib": 4362.734375
+      },
+      "answer": "Sure! Let's break down **supervised fine-tuning** in simple English.\n\n---\n\n### 🔍 **What is Supervised Fine-Tuning?**\n\n**Supervised fine-tuning** is a machine learning technique used to improve the performance of a pre-trained model on a specific task. Instead of training the model from scratch, you take a model that was trained on a large dataset for a different task and then fine-tune it on a smaller, more specific dataset related to the task you want to use it for.\n\n---\n\n### 🧠 **Purpose**\n\nThe main purpose of **supervised fine-tuning** is to:\n\n-"
+    }
+  ],
+  "summary": {
+    "median_seconds": 4.056113708007615,
+    "median_output_tokens_per_second": 31.557300710604164
+  }
+}

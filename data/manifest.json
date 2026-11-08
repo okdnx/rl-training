@@ -1,0 +1,30 @@
+{
+  "seed": 42,
+  "numbers_per_problem": 3,
+  "number_range": [
+    2,
+    20
+  ],
+  "target_range": [
+    1,
+    100
+  ],
+  "splits": {
+    "sft_train": {
+      "count": 1000,
+      "sha256": "8a5875758ed02ff7f193d471f2999d42c7e5f3288066153c0e46e43de9db1c6b"
+    },
+    "rl_train": {
+      "count": 1000,
+      "sha256": "e57b1d48e184b9352ff5f3622b90197f149766984cfedab6c111a3c7f0bf9b25"
+    },
+    "valid": {
+      "count": 100,
+      "sha256": "1d806f70eb966a362514ee976cdc29e46ec9ff207e6452e11be3b1a4a5053312"
+    },
+    "test": {
+      "count": 200,
+      "sha256": "6740e8235ef3abee7eaaf1b2f9c55c2b4b89566640e6b488420a32760a008e42"
+    }
+  }
+}

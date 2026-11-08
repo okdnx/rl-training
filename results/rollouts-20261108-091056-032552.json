@@ -1,0 +1,763 @@
+{
+  "adapter": "/Users/kogumaro/Developer/rl-practice/checkpoints/sft-100",
+  "device": "mps:0",
+  "summary": {
+    "problems": 10,
+    "generations_per_problem": 4,
+    "mixed_groups": 5,
+    "all_zero_groups": 4,
+    "all_one_groups": 1
+  },
+  "groups": [
+    {
+      "id": "rl_train-0000",
+      "numbers": [
+        6,
+        13,
+        14
+      ],
+      "target": 21,
+      "prompt": "Use each number exactly once: 6, 13, 14.\nMake 21 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mixed": true,
+      "answers": [
+        {
+          "seed": 42,
+          "answer": "{\"expression\": \"13 + (14 - 6)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "13 + (14 - 6)",
+          "value": "21",
+          "reason": "correct"
+        },
+        {
+          "seed": 43,
+          "answer": "{\"expression\": \"13 + (6 + 14)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "13 + (6 + 14)",
+          "value": "33",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 44,
+          "answer": "{\"expression\": \"(13 + 6) + 14\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(13 + 6) + 14",
+          "value": "33",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 45,
+          "answer": "{\"expression\": \"14 + (13 - 6)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "14 + (13 - 6)",
+          "value": "21",
+          "reason": "correct"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0001",
+      "numbers": [
+        14,
+        17,
+        2
+      ],
+      "target": 24,
+      "prompt": "Use each number exactly once: 14, 17, 2.\nMake 24 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mixed": false,
+      "answers": [
+        {
+          "seed": 46,
+          "answer": "{\"expression\": \"(17 - 2) + 14\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(17 - 2) + 14",
+          "value": "29",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 47,
+          "answer": "{\"expression\": \"17 + (2 + 14)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "17 + (2 + 14)",
+          "value": "33",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 48,
+          "answer": "{\"expression\": \"17 + (2 * 14)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "17 + (2 * 14)",
+          "value": "45",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 49,
+          "answer": "{\"expression\": \"(17 + 2) + 14\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(17 + 2) + 14",
+          "value": "33",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0002",
+      "numbers": [
+        3,
+        14,
+        20
+      ],
+      "target": 31,
+      "prompt": "Use each number exactly once: 3, 14, 20.\nMake 31 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mixed": false,
+      "answers": [
+        {
+          "seed": 50,
+          "answer": "{\"expression\": \"(20 + 14) + 3\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(20 + 14) + 3",
+          "value": "37",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 51,
+          "answer": "{\"expression\": \"14 + (20 + 3)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "14 + (20 + 3)",
+          "value": "37",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 52,
+          "answer": "{\"expression\": \"(3 + 14) + 20\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(3 + 14) + 20",
+          "value": "37",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 53,
+          "answer": "{\"expression\": \"(20 + 14) + 3\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(20 + 14) + 3",
+          "value": "37",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0003",
+      "numbers": [
+        5,
+        15,
+        19
+      ],
+      "target": 39,
+      "prompt": "Use each number exactly once: 5, 15, 19.\nMake 39 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mixed": false,
+      "answers": [
+        {
+          "seed": 54,
+          "answer": "{\"expression\": \"15 + (19 + 5)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "15 + (19 + 5)",
+          "value": "39",
+          "reason": "correct"
+        },
+        {
+          "seed": 55,
+          "answer": "{\"expression\": \"19 + (15 + 5)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "19 + (15 + 5)",
+          "value": "39",
+          "reason": "correct"
+        },
+        {
+          "seed": 56,
+          "answer": "{\"expression\": \"5 + (15 + 19)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "5 + (15 + 19)",
+          "value": "39",
+          "reason": "correct"
+        },
+        {
+          "seed": 57,
+          "answer": "{\"expression\": \"5 + (15 + 19)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "5 + (15 + 19)",
+          "value": "39",
+          "reason": "correct"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0004",
+      "numbers": [
+        10,
+        2,
+        13
+      ],
+      "target": 46,
+      "prompt": "Use each number exactly once: 10, 2, 13.\nMake 46 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mixed": false,
+      "answers": [
+        {
+          "seed": 58,
+          "answer": "{\"expression\": \"13 + (2 * 10)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "13 + (2 * 10)",
+          "value": "33",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 59,
+          "answer": "{\"expression\": \"13 + (10 * 2)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "13 + (10 * 2)",
+          "value": "33",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 60,
+          "answer": "{\"expression\": \"(13 + 2) * 10\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(13 + 2) * 10",
+          "value": "150",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 61,
+          "answer": "{\"expression\": \"13 + (10 + 2)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "13 + (10 + 2)",
+          "value": "25",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0005",
+      "numbers": [
+        3,
+        6,
+        4
+      ],
+      "target": 22,
+      "prompt": "Use each number exactly once: 3, 6, 4.\nMake 22 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "mixed": true,
+      "answers": [
+        {
+          "seed": 62,
+          "answer": "{\"expression\": \"4 + (6 * 3)\"}",
+          "input_tokens": 50,
+          "output_tokens": 14,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "4 + (6 * 3)",
+          "value": "22",
+          "reason": "correct"
+        },
+        {
+          "seed": 63,
+          "answer": "{\"expression\": \"4 + (6 * 3)\"}",
+          "input_tokens": 50,
+          "output_tokens": 14,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "4 + (6 * 3)",
+          "value": "22",
+          "reason": "correct"
+        },
+        {
+          "seed": 64,
+          "answer": "{\"expression\": \"4 + (6 * 3)\"}",
+          "input_tokens": 50,
+          "output_tokens": 14,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "4 + (6 * 3)",
+          "value": "22",
+          "reason": "correct"
+        },
+        {
+          "seed": 65,
+          "answer": "{\"expression\": \"(3 + 6) * 4\"}",
+          "input_tokens": 50,
+          "output_tokens": 14,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(3 + 6) * 4",
+          "value": "36",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0006",
+      "numbers": [
+        2,
+        10,
+        3
+      ],
+      "target": 32,
+      "prompt": "Use each number exactly once: 2, 10, 3.\nMake 32 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mixed": true,
+      "answers": [
+        {
+          "seed": 66,
+          "answer": "{\"expression\": \"(10 * 3) + 2\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "(10 * 3) + 2",
+          "value": "32",
+          "reason": "correct"
+        },
+        {
+          "seed": 67,
+          "answer": "{\"expression\": \"10 + (2 * 3)\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "10 + (2 * 3)",
+          "value": "16",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 68,
+          "answer": "{\"expression\": \"(10 + 3) * 2\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(10 + 3) * 2",
+          "value": "26",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 69,
+          "answer": "{\"expression\": \"(10 + 3) * 2\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(10 + 3) * 2",
+          "value": "26",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0007",
+      "numbers": [
+        5,
+        19,
+        2
+      ],
+      "target": 12,
+      "prompt": "Use each number exactly once: 5, 19, 2.\nMake 12 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mixed": false,
+      "answers": [
+        {
+          "seed": 70,
+          "answer": "{\"expression\": \"(19 - 5) + 2\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(19 - 5) + 2",
+          "value": "16",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 71,
+          "answer": "{\"expression\": \"5 + (19 - 2)\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "5 + (19 - 2)",
+          "value": "22",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 72,
+          "answer": "{\"expression\": \"5 + (2 + 19)\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "5 + (2 + 19)",
+          "value": "26",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 73,
+          "answer": "{\"expression\": \"2 + (19 - 5)\"}",
+          "input_tokens": 51,
+          "output_tokens": 15,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "2 + (19 - 5)",
+          "value": "16",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0008",
+      "numbers": [
+        3,
+        18,
+        20
+      ],
+      "target": 41,
+      "prompt": "Use each number exactly once: 3, 18, 20.\nMake 41 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "mixed": true,
+      "answers": [
+        {
+          "seed": 74,
+          "answer": "{\"expression\": \"(20 + 3) + 18\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "(20 + 3) + 18",
+          "value": "41",
+          "reason": "correct"
+        },
+        {
+          "seed": 75,
+          "answer": "{\"expression\": \"20 + (3 + 18)\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "20 + (3 + 18)",
+          "value": "41",
+          "reason": "correct"
+        },
+        {
+          "seed": 76,
+          "answer": "{\"expression\": \"(20 + 3) + 18\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "(20 + 3) + 18",
+          "value": "41",
+          "reason": "correct"
+        },
+        {
+          "seed": 77,
+          "answer": "{\"expression\": \"(20 - 3) + 18\"}",
+          "input_tokens": 52,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "(20 - 3) + 18",
+          "value": "35",
+          "reason": "wrong_target"
+        }
+      ]
+    },
+    {
+      "id": "rl_train-0009",
+      "numbers": [
+        17,
+        5,
+        18
+      ],
+      "target": 4,
+      "prompt": "Use each number exactly once: 17, 5, 18.\nMake 4 using +, -, *, / and parentheses.\nReturn only JSON with an \"expression\" field.",
+      "rewards": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "mixed": true,
+      "answers": [
+        {
+          "seed": 78,
+          "answer": "{\"expression\": \"18 + (5 - 17)\"}",
+          "input_tokens": 51,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "18 + (5 - 17)",
+          "value": "6",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 79,
+          "answer": "{\"expression\": \"18 - (17 - 5)\"}",
+          "input_tokens": 51,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "18 - (17 - 5)",
+          "value": "6",
+          "reason": "wrong_target"
+        },
+        {
+          "seed": 80,
+          "answer": "{\"expression\": \"17 + (5 - 18)\"}",
+          "input_tokens": 51,
+          "output_tokens": 16,
+          "reward": 1.0,
+          "correct": true,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": true,
+          "expression": "17 + (5 - 18)",
+          "value": "4",
+          "reason": "correct"
+        },
+        {
+          "seed": 81,
+          "answer": "{\"expression\": \"18 - (5 + 17)\"}",
+          "input_tokens": 51,
+          "output_tokens": 16,
+          "reward": 0.0,
+          "correct": false,
+          "format_ok": true,
+          "numbers_ok": true,
+          "target_ok": false,
+          "expression": "18 - (5 + 17)",
+          "value": "-4",
+          "reason": "wrong_target"
+        }
+      ]
+    }
+  ]
+}
